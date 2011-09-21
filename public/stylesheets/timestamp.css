@@ -1,0 +1,22 @@
+time>figure {
+  margin:0;
+  clear:none;
+  float:left;
+}
+time>figure>figcaption {
+  padding-left:1em;
+  text-align:center;
+  margin-top: -1em;
+}
+time>figure:first-child>figcaption {
+  padding-left:0;
+}
+time>figure>var {
+  font-size:72px;
+}
+time>figure>var:before {
+  content: '.';
+}
+time>figure:first-child>var:before {
+  content: '';
+}

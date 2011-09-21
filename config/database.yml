@@ -1,0 +1,9 @@
+development:
+  adapter: mysql2					
+  database: whatatime_dev
+  reconnect: false
+  username: root
+  encoding: utf8
+  charset: utf8
+  collation: utf8_bin
+  socket: /var/run/mysqld/mysqld.sock
