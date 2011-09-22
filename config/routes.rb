@@ -3,4 +3,5 @@ Whatatime::Application.routes.draw do
   match '/time_entries/:id/stop' => 'time_entries#stop', :as => :stop_time_entry
   resources :time_entries
 
+  root :to => 'time_entries#index'
 end
