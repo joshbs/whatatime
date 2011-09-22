@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110410185015) do
+ActiveRecord::Schema.define(:version => 20110922212313) do
 
   create_table "time_entries", :force => true do |t|
     t.datetime "started_at"
     t.datetime "stopped_at"
     t.string   "name"
-    t.text     "decription"
+    t.text     "description"
     t.text     "note"
     t.string   "user"
     t.datetime "created_at"
