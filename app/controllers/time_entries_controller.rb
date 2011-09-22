@@ -6,7 +6,7 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.
-      format.json # index.json.
+      format.json { render :json => @time_entries.as_json } # index.json.
     end
   end
 
@@ -58,7 +58,7 @@ class TimeEntriesController < ApplicationController
     respond_to do |format|
       if @time_entry.save
         format.html { redirect_to(@time_entry, :notice => 'Time entry was successfully created.') }
-        
+
       else
         format.html { render :action => "new" }
       end
@@ -92,4 +92,3 @@ class TimeEntriesController < ApplicationController
   end
 
   # JSON
-  
