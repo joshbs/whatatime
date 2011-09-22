@@ -33,7 +33,7 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.
-      format.json # show.html.
+      format.json { render :json => @time_entries.as_json } #show.json
     end
   end
 
