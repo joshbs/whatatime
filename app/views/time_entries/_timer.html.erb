@@ -1,0 +1,10 @@
+<%= form_tag item, :method => :post do %>
+  <% if item.timer_running? %>
+    <%= submit_tag "stop" %>
+  <% elsif item.timer_complete? %>
+    <%= submit_tag "disabled", :enabled => false %>
+  <% else %>
+    <%= submit_tag "start" %>
+  <% end %>
+<% end %>
+
