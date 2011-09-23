@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Test Document</title>
+    <link href= "stylesheets/application.css" rel="stylesheet"/>
+    <link href="stylesheets/timer.css" rel="stylesheet"/>
+    <link href="stylesheets/timestamp.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.timer.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $('.timestamp').each(function(){
+        var t;
+        var startTime = new Date($(this).data('start'));
+        var stopTime  = new Date($(this).data('stop'));
+
+        if(stopTime.getTime())
+        {
+          t = new Timer(startTime,stopTime).getDuration();
+          $(this).html('<figure class="hour"><var>'+t[3]+'</var><figcaption>hours</figcaption></figure><figure class="minute"><var>'+t[2]+'</var><figcaption>minutes</figcaption></figure><figure class="second"><var>'+t[1]+'</var><figcaption>seconds</figcaption></figure>');
+        }
+        else
+        {
+          $(this).everyTime('1s', function() {
+            t = new Timer(startTime).getDuration();
+            $(this).html('<figure class="hour"><var>'+t[3]+'</var><figcaption>hours</figcaption></figure><figure class="minute"><var>'+t[2]+'</var><figcaption>minutes</figcaption></figure><figure class="second"><var>'+t[1]+'</var><figcaption>seconds</figcaption></figure>');
+          });
+        }
+      });
+    });
+    </script>
+  </head>
+  <body class="body">
+    <header>
+      <h1>Entry Name</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent condimentum, augue ac feugiat ornare, ipsum massa elementum nisl, rutrum volutpat tellus risus posuere augue. Donec rutrum blandit bibendum. Donec id elit ante, nec porttitor elit.
+      </p>
+    </header>
+    <section>
+      
+      <div class="timer">
+        <time class="timestamp" data-start="Wed May 25 2011 18:22:15 GMT-0500 (CDT)">
+          <figure class="hour">
+            <var>01</var>
+            <figcaption>hours</figcaption>
+          </figure>
+          <figure class="minute">
+            <var>02</var>
+            <figcaption>minutes</figcaption>
+          </figure>
+          <figure class="second">
+            <var>03</var>
+            <figcaption>seconds</figcaption>
+          </figure>
+        </time>
+        <button class="start" disabled="true">Start</button> 
+        <button class="stop">Stop</button>
+      </div>
+    </section>
+    <footer>
+    </footer>
+  </body>
+</html>
