@@ -29,7 +29,12 @@ GEM
       activesupport (= 3.0.9)
     activesupport (3.0.9)
     arel (2.0.10)
+    bcrypt-ruby (3.0.1)
     builder (2.1.2)
+    devise (1.4.7)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.5.0)
@@ -40,6 +45,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mysql2 (0.2.7)
+    orm_adapter (0.0.5)
     polyglot (0.3.2)
     rack (1.2.4)
     rack-mount (0.6.14)
@@ -67,10 +73,13 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
+    warden (1.0.5)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  devise
   mysql2
   rails (= 3.0.9)
