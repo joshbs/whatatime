@@ -1,6 +1,8 @@
 class TimeEntriesController < ApplicationController
   # GET /time_entries
   # GET /time_entries.xml
+  before_filter :authenticate_user!
+
   def index
     @time_entries = TimeEntry.all
 
