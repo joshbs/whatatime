@@ -10,23 +10,6 @@ class TimeEntriesController < ApplicationController
     end
   end
 
-  def start
-    @time_entry = TimeEntry.find(params[:id])
-    @time_entry.started_at = Time.now
-    if @time_entry.save
-      redirect_to(@time_entry)
-    end
-  end
-
-  def stop
-    @time_entry = TimeEntry.find(params[:id])
-    @time_entry.stopped_at = Time.now
-    if @time_entry.save
-      redirect_to(@time_entry)
-    end
-  end
-
-
   # GET /time_entries/
   def show
     @time_entry = TimeEntry.find(params[:id])
@@ -69,6 +52,9 @@ class TimeEntriesController < ApplicationController
   # PUT /time_entries/1.xml
   def update
     @time_entry = TimeEntry.find(params[:id])
+
+    @time_entry.started_at = Time.now if params[:start]
+    @time_entry.stopped_at = Time.now if params[:stop]
 
     respond_to do |format|
       if @time_entry.update_attributes(params[:time_entry])
