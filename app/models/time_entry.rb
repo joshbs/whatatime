@@ -9,7 +9,7 @@ class TimeEntry < ActiveRecord::Base
     !self.stopped_at.nil?
   end
 
-  def running_time
+  def duration
     time = self.stopped_at || Time.now - self.started_at rescue return
 
     {
