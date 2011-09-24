@@ -8,7 +8,17 @@ class TimeEntry < ActiveRecord::Base
   def timer_complete?
     !self.stopped_at.nil?
   end
-  
+
+  def running_time
+    time = self.stopped_at || Time.now - self.started_at rescue return
+
+    {
+      hours: time.to_i / 3600,
+      minutes: (time.to_i / 60) % 60,
+      seconds: time.to_i % 60
+    }
+  end
+
   def to_relative_time
     if self.timer_running?
       "started #{time_ago_in_words(self.started_at, true)} ago"
