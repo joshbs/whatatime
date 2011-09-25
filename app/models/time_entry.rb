@@ -1,6 +1,8 @@
 class TimeEntry < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
 
+  has_many :paranormal_activities
+
   def timer_running?
     !self.started_at.nil? && !self.timer_complete?
   end

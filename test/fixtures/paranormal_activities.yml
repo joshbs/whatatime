@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  time_entry: 
+  service: 
+  url: MyString
+  description: MyText
+  raw: MyText
+  deleted: false
+  happened_at: 2011-09-25 13:29:37
+
+two:
+  time_entry: 
+  service: 
+  url: MyString
+  description: MyText
+  raw: MyText
+  deleted: false
+  happened_at: 2011-09-25 13:29:37
