@@ -10,7 +10,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110923185728) do
+ActiveRecord::Schema.define(:version => 20110925193321) do
+
+  create_table "paranormal_activities", :force => true do |t|
+    t.integer  "time_entry_id"
+    t.integer  "service_id"
+    t.string   "url"
+    t.text     "description"
+    t.text     "raw"
+    t.boolean  "deleted"
+    t.datetime "happened_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "services", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "settings", :force => true do |t|
+    t.integer  "settable_id"
+    t.string   "settable_type"
+    t.string   "name"
+    t.string   "value_type"
+    t.text     "default"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "time_entries", :force => true do |t|
     t.datetime "started_at"
