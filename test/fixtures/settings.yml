@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  settable: 
+  name: MyString
+  value_type: MyString
+  default: MyText
+
+two:
+  settable: 
+  name: MyString
+  value_type: MyString
+  default: MyText
