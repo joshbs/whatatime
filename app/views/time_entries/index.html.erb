@@ -1,3 +1,4 @@
+<div id="time_entries">
 <% @time_entries.each do |time_entry| %>
   <article>
     <h1><%= link_to time_entry.name, time_entry %></h1>
@@ -6,4 +7,5 @@
     <%= render 'timer', :item => time_entry %>
   </article>
 <% end %>
+</div>
 
