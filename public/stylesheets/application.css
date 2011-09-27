@@ -4,9 +4,13 @@ body {
   margin: auto;
 }
 
+a {
+  color: #666666;
+}
+
 header {
   margin:0;
-  padding: 3em 2em 1em 2em;
+  padding: 3em 1em 1em 1em;
   background-color: #E6E6E6;
 
   border-radius: 1em 1em 0 0;
@@ -28,12 +32,16 @@ h1 {
 }
 
 #time_entries > article:first-child {
-  background-color: #000000;
+  background-color: #262626;
   color: #EFEFEF;
 
   border-top: 1px solid #000000;
   border-right: 1px solid #161616;
   border-bottom: 1px solid #FFFFFF;
   border-left: 1px solid #161616;
+}
+
+#time_entries > article:first-child p {
+  display:none;
 }
 
