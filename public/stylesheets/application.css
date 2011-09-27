@@ -19,6 +19,8 @@ h1 {
 
 #time_entries {
   background-color: #E6E6E6;
+
+  border-radius: 0 0 1em 1em;
 }
 
 #time_entries > article {
@@ -28,5 +30,10 @@ h1 {
 #time_entries > article:first-child {
   background-color: #000000;
   color: #EFEFEF;
+
+  border-top: 1px solid #000000;
+  border-right: 1px solid #161616;
+  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #161616;
 }
 
