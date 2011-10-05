@@ -4,6 +4,7 @@
     <h1><%= link_to time_entry.name, time_entry %></h1>
     <h2><%= time_entry.to_relative_time %></h2>
     <%= render 'timer', :item => time_entry %>
+    <h3><%= link_to 'Destroy', :confirm => 'Are you sure?', :method => :delete%></h3>
   </article>
 <% end %>
 </div>
