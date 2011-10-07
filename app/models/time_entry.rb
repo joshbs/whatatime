@@ -1,6 +1,8 @@
 class TimeEntry < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
 
+  belongs_to :user
+
   has_many :paranormal_activities
 
   def timer_running?
@@ -13,24 +15,26 @@ class TimeEntry < ActiveRecord::Base
 
   def duration
     time = self.stopped_at || Time.now - self.started_at rescue return
+    begin
+      years, time = time.divmod(29030400)
+      months, time = time.divmod(2419200)
+      weeks, time = time.divmod(604800)
+      days, time = time.divmod(86400)
+      hours, time = time.divmod(3600)
+      minutes, time = time.divmod(60)
+      seconds = time.to_i
 
-    years, time = time.divmod(29030400)
-    months, time = time.divmod(2419200)
-    weeks, time = time.divmod(604800)
-    days, time = time.divmod(86400)
-    hours, time = time.divmod(3600)
-    minutes, time = time.divmod(60)
-    seconds = time.to_i
-
-    {
-      years: years,
-      months: months,
-      weeks: weeks,
-      days: days,
-      hours: hours,
-      minutes: minutes,
-      seconds: seconds
-    }
+      {
+        years: years,
+        months: months,
+        weeks: weeks,
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+      }
+    rescue
+    end
   end
 
   def to_relative_time

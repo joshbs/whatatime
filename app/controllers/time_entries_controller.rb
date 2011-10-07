@@ -4,7 +4,7 @@ class TimeEntriesController < ApplicationController
   # GET /time_entries.xml
 
   def index
-    @time_entries = TimeEntry.all
+    @time_entries = current_user.time_entries
 
     respond_to do |format|
       format.html # index.html.
@@ -39,6 +39,7 @@ class TimeEntriesController < ApplicationController
   # POST /time_
   def create
     @time_entry = TimeEntry.new(params[:time_entry])
+    @time_entry.user = current_user
 
     respond_to do |format|
       if @time_entry.save
