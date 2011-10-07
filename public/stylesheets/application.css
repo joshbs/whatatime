@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Gentium+Basic);
 
 body {
-  background-color: #161616;
+  background-color: #66CC33;
   width: 600px;
   margin: auto;
   font-family: sans-serif;
@@ -19,6 +19,8 @@ header {
   background-color: #E6E6E6;
 
   border-radius: 1em 1em 0 0;
+  border: 3px solid #666;
+  border-bottom: none;
 }
 
 header > h1 {
@@ -27,6 +29,12 @@ header > h1 {
   font-size: 48px;
   color: #444;
   text-shadow: 1px 1px #FFF, -1px -1px #333;
+}
+
+header > h1 + p {
+  margin:0;
+  padding: 0 0 0 0.5em;
+  font-size:12px;
 }
 
 a {
@@ -53,6 +61,9 @@ h1 {
   background-color: #E6E6E6;
 
   border-radius: 0 0 1em 1em;
+  
+  border: 3px solid #666;
+  border-top: none;
 }
 
 #content > article, #content > div, #content > form {
