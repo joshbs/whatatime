@@ -11,11 +11,12 @@ body {
 
 a {
   color: #666666;
+  text-decoration: none;
 }
 
 header {
   margin: 1em 0 0 0;
-  padding: 3em 1em 0.5em 1em;
+  padding: 2em 1em 0.5em 1em;
   background-color: #E6E6E6;
 
   border-radius: 1em 1em 0 0;
@@ -27,18 +28,17 @@ header > h1 {
   padding:0;
   font-family: 'Sansita One', cursive;
   font-size: 48px;
-  color: #444;
-  text-shadow: 1px 1px #FFF, -1px -1px #333;
+  text-shadow: 1px 1px #ccc, -1px -1px #333;
+}
+
+header > h1 > a {
+  color: #393939;
 }
 
 header > h1 + p {
   margin:0;
   padding: 0 0 0 0.5em;
   font-size:12px;
-}
-
-a {
-  text-decoration: none;
 }
 
 article h2 {
@@ -92,7 +92,9 @@ h1 {
 .notice, .alert, .error {
   margin: 1em 0 0 0;
   padding: 1em 1em 1em 1em;
-  background-color: #E6E6E6;
+  background-color: #262626;
+
+  color: #E6E6E6;
 
   border-radius: 1em;
 }
