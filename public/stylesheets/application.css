@@ -13,7 +13,7 @@ a {
 }
 
 header {
-  margin:0;
+  margin: 1em 0 0 0;
   padding: 3em 1em 0.5em 1em;
   background-color: #E6E6E6;
 
@@ -24,6 +24,12 @@ header > h1 {
   padding:0;
   font-family: 'Sansita One', cursive;
   font-size: 48px;
+  color: #444;
+  text-shadow: 1px 1px #FFF, -1px -1px #333;
+}
+
+header > h1 > a {
+  text-decoration: none;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -37,7 +43,7 @@ h1 {
 
 #content {
   margin:0;
-  padding: 0.5em 1em 3em 1em;
+  padding: 0.5em 0 3em 0;
   background-color: #E6E6E6;
 
   border-radius: 0 0 1em 1em;
@@ -49,20 +55,18 @@ h1 {
   border-radius: 0 0 1em 1em;
 }
 
-#time_entries > article {
+#time_entries > .time_entry {
   padding: 1em;
 }
 
-#time_entries > article:first-child {
-  background-color: #262626;
-  color: #EFEFEF;
-
-  border-top: 1px solid #000000;
-  border-right: 1px solid #161616;
-  border-bottom: 1px solid #FFFFFF;
-  border-left: 1px solid #161616;
+#time_entries > .time_entry:first-child p {
+  display:none;
 }
 
-#time_entries > article:first-child p {
-  display:none;
+.notice, .alert, .error {
+  margin: 1em 0 0 0;
+  padding: 1em 1em 1em 1em;
+  background-color: #E6E6E6;
+
+  border-radius: 1em;
 }
