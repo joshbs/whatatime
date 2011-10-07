@@ -7,8 +7,8 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <%= content_tag :p, notice, :class => "notice" if notice %>
+  <%= content_tag :p, alert, :class => "alert" if alert %>
 
   <header>
     <h1><%= link_to "Whatatime", root_url %></h1>
