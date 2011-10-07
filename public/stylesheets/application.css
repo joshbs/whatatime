@@ -38,11 +38,12 @@ article h2 {
 }
 
 h1,h2,h3,h4,h5,h6 {
+  margin:0;
+  padding:0;
   font-family: 'Gentium Basic', sans-serif;
 }
 
 h1 {
-  margin: 0;
   padding: 0.125em;
 }
 
@@ -54,7 +55,12 @@ h1 {
   border-radius: 0 0 1em 1em;
 }
 
+#content > article, #content > div, #content > form {
+  padding: 1em 1em 0 1em;
+}
+
 #time_entries {
+  padding: 0;
   background-color: #E6E6E6;
 
   border-radius: 0 0 1em 1em;
