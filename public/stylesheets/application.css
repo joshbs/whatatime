@@ -6,6 +6,7 @@ body {
   width: 600px;
   margin: auto;
   font-family: sans-serif;
+  color: #262626;
 }
 
 a {
@@ -28,8 +29,12 @@ header > h1 {
   text-shadow: 1px 1px #FFF, -1px -1px #333;
 }
 
-header > h1 > a {
+a {
   text-decoration: none;
+}
+
+article h2 {
+  font-size: 1em
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -56,11 +61,15 @@ h1 {
 }
 
 #time_entries > .time_entry {
-  padding: 1em;
+  padding: 1em 1em 0 1em;
 }
 
-#time_entries > .time_entry:first-child p {
-  display:none;
+#time_entries > .time_entry:first-child {
+  padding-top: 0;
+}
+
+.time_entry {
+  padding: 0 1em;
 }
 
 .notice, .alert, .error {
