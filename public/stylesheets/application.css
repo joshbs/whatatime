@@ -5,6 +5,7 @@ body {
   background-color: #161616;
   width: 600px;
   margin: auto;
+  font-family: sans-serif;
 }
 
 a {
@@ -13,10 +14,20 @@ a {
 
 header {
   margin:0;
-  padding: 3em 1em 1em 1em;
+  padding: 3em 1em 0.5em 1em;
   background-color: #E6E6E6;
 
   border-radius: 1em 1em 0 0;
+}
+
+header > h1 {
+  padding:0;
+  font-family: 'Sansita One', cursive;
+  font-size: 48px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Gentium Basic', sans-serif;
 }
 
 h1 {
@@ -55,4 +66,3 @@ h1 {
 #time_entries > article:first-child p {
   display:none;
 }
-
