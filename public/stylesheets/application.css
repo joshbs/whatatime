@@ -24,6 +24,14 @@ h1 {
   padding: 0.125em;
 }
 
+#content {
+  margin:0;
+  padding: 0.5em 1em 3em 1em;
+  background-color: #E6E6E6;
+
+  border-radius: 0 0 1em 1em;
+}
+
 #time_entries {
   background-color: #E6E6E6;
 
