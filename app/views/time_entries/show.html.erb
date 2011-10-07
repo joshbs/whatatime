@@ -1,4 +1,6 @@
-<h1><%= @time_entry.name %></h1>
-<h2><%= @time_entry.to_relative_time %></h2>
-<%= render 'timer', :item => @time_entry %>
-<%= link_to 'destroy', @time_entry, :confirm => 'Are you sure?', :method => :delete%>
+<article class="time_entry">
+  <h1><%= @time_entry.name %></h1>
+  <%= link_to 'destroy', @time_entry, :confirm => 'Are you sure?', :method => :delete%>
+  <h2><%= @time_entry.to_relative_time %></h2>
+  <%= render 'timer', :item => @time_entry %>
+</article>
