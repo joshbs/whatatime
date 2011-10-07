@@ -3,8 +3,9 @@
   <article>
     <h1><%= link_to time_entry.name, time_entry %></h1>
     <h2><%= time_entry.to_relative_time %></h2>
+    <p><%= formatted_duration(time_entry, 3) rescue nil %></p>
     <%= render 'timer', :item => time_entry %>
-    <h3><%= link_to 'Destroy', :confirm => 'Are you sure?', :method => :delete%></h3>
+    <h3><%= link_to 'Destroy', time_entry, :confirm => 'Are you sure?', :method => :delete%></h3>
   </article>
 <% end %>
 </div>
