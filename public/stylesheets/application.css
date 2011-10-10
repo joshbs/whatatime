@@ -41,18 +41,22 @@ header > h1 + p {
   font-size:12px;
 }
 
+article h1 {
+  font-size: 2em;
+}
+
 article h2 {
-  font-size: 1em
+  font-size: 1em;
+  font-weight:normal;
 }
 
 h1,h2,h3,h4,h5,h6 {
   margin:0;
   padding:0;
-  font-family: 'Gentium Basic', sans-serif;
 }
 
 h1 {
-  padding: 0.125em;
+  font-family: 'Gentium Basic', sans-serif;
 }
 
 #content {
