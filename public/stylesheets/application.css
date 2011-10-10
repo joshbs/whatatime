@@ -3,6 +3,7 @@
 
 body {
   background-color: #66CC33;
+
   width: 600px;
   margin: auto;
   font-family: sans-serif;
@@ -20,19 +21,20 @@ header {
   background-color: #E6E6E6;
 
   border-radius: 1em 1em 0 0;
-  border: 3px solid #666;
+  border: 0.5em solid #262626;
   border-bottom: none;
 }
 
 header > h1 {
+  margin-bottom: -0.2em;
   padding:0;
   font-family: 'Sansita One', cursive;
   font-size: 48px;
-  text-shadow: 1px 1px #ccc, -1px -1px #333;
+  text-shadow: 1px 1px #fff, -1px -1px #333;
 }
 
 header > h1 > a {
-  color: #393939;
+  color: #455545;
 }
 
 header > h1 + p {
@@ -66,7 +68,7 @@ h1 {
 
   border-radius: 0 0 1em 1em; 
   
-  border: 3px solid #666;
+  border: 0.5em solid #262626;
   border-top: none;
 }
 
@@ -82,7 +84,7 @@ h1 {
 }
 
 #time_entries > .time_entry {
-  padding: 1em 1em 0 1em;
+  padding: 1em 0.5em 0 0.5em;
 }
 
 #time_entries > .time_entry:first-child {
