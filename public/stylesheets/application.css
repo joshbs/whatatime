@@ -60,7 +60,7 @@ h1 {
   padding: 0.5em 0 3em 0;
   background-color: #E6E6E6;
 
-  border-radius: 0 0 1em 1em;
+  border-radius: 0 0 1em 1em; 
   
   border: 3px solid #666;
   border-top: none;
@@ -92,9 +92,21 @@ h1 {
 .notice, .alert, .error {
   margin: 1em 0 0 0;
   padding: 1em 1em 0.75em 1em;
+
+  padding-left: 2.5em;
   background-color: #262626;
+  background-repeat: no-repeat;
+  background-position: 1em 50%;
 
   color: #E6E6E6;
 
   border-radius: 1em;
+}
+
+.notice {
+  background-image: url('/images/notice_16.png');
+}
+
+.alert, .error {
+  background-image: url('/images/alert_16.png');
 }
