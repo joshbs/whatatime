@@ -91,7 +91,7 @@ h1 {
 
 .notice, .alert, .error {
   margin: 1em 0 0 0;
-  padding: 1em 1em 1em 1em;
+  padding: 1em 1em 0.75em 1em;
   background-color: #262626;
 
   color: #E6E6E6;
