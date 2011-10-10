@@ -7,6 +7,7 @@ class CatchPhrase
   ]
   
   def self.all
+    @phrases
   end
   
   def self.random
