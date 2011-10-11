@@ -8,7 +8,7 @@ Whatatime::Application.routes.draw do
     }
 
   resources :time_entries
-  resource :home, except: [:index, :new, :create, :destroy]
+  resource :home, controller: 'home', except: [:index, :new, :create, :destroy]
 
   root :to => 'time_entries#index', :constraints => lambda {|r| r.env["warden"].authenticate? }
   root :to => 'home#show'
