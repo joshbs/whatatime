@@ -69,18 +69,45 @@ h1 {
 }
 
 #time_entries {
-  padding: 0;
+  padding: 0 !important;
   background-color: #E6E6E6;
 
   border-radius: 0 0 1em 1em;
 }
 
 #time_entries > .time_entry {
-  padding: 1em 0.5em 0 0.5em;
+  margin-top:1em;
+  padding:0.25em 1em;
+  border-top: 1px solid #ccc;
 }
 
-#time_entries > .time_entry:first-child {
-  padding-top: 0;
+#time_entries > .time_entry form{
+  padding:0;
+  left: 1em;
+  bottom: 0.25em;
+  float:right;
+  position: relative;
+}
+
+#time_entries > .time_entry form input[type="submit"]{
+  cursor: pointer;
+  margin: 0;
+  padding:0.5em 1em;
+  
+  border:none;
+  background-color: #ccc;
+}
+
+#time_entries > .time_entry form input[type="submit"][disabled]{
+  cursor: default;
+}
+
+#time_entries > .time_entry form input[type="submit"][value="start"]{
+  background-color: #6c3;
+}
+
+#time_entries > .time_entry form input[type="submit"][value="stop"]{
+  background-color: #C00;
 }
 
 #user_navigation {
