@@ -7,6 +7,8 @@ Whatatime::Application.routes.draw do
   end
 
   resources :time_entries
+  resource :home, except: [:index, :new, :create, :destroy]
 
-  root :to => 'time_entries#index'
+
+  root :to => 'home#show'
 end
