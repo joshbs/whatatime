@@ -17,6 +17,7 @@ a {
 
 header {
   padding: 0 1em;
+  padding-top: 1em;
 }
 
 header > h1 {
@@ -58,12 +59,18 @@ h1 {
 
 #app {
   margin: 1em 0 0 0;
-  padding: 2em 0;
-  padding-bottom:0;
-  background-color: #EEE;
+  padding: 0;
+  padding-bottom:2em;
+  background-color: #e6e6e6;
   
   border: 0.5em solid #262626;
   border-radius: 1em;
+}
+
+#app > header {
+  padding-bottom: 1em;
+  background-color: #eee;
+  border-radius: 0.4em 0.4em 0 0;
 }
 
 #app > article, #app > div, #app > form {
@@ -83,6 +90,10 @@ h1 {
   border-top: 1px solid #ccc;
   background: -webkit-gradient(linear, left top, left bottom, from(#d6d6d6), color-stop(10%, #e0e0e0), to(#e6e6e6));
   
+}
+
+#time_entries > .time_entry:first-child {
+  margin-top:0;
 }
 
 #time_entries > .time_entry form{
@@ -139,7 +150,7 @@ h1 {
 
   float:right;
   position:relative;
-  bottom: 2.3em;
+  bottom: 1.15em;
   left: 1.2em;
 }
 
