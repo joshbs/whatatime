@@ -4,7 +4,8 @@ class CatchPhrase
     "you break it, we time it",
     "don't worry about time, that's why we're here",
     "if it takes time, we like it a lot more",
-    "we're like <em>red-light green-light</em> for your time"
+    "we're like <em>red-light green-light</em> for your time",
+    "we want your time back"
   ]
   
   def self.all
