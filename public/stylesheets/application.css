@@ -134,6 +134,14 @@ h1 {
   background: -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(85%,#eee),color-stop(85%,#ccc), to(#ccc));
 }
 
+#time_entries > .time_entry:first-child form input[type="submit"][value="start"] {
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(85%,#eee),color-stop(85%,#6c3), to(#6c3));
+}
+
+#time_entries > .time_entry:first-child form input[type="submit"][value="stop"] {
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(85%,#eee),color-stop(85%,#C00), to(#C00));
+}
+
 #user_navigation {
   padding: 0.5em;
   background-color: #f6f6f6;
