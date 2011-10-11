@@ -1,17 +1,15 @@
 Whatatime::Application.routes.draw do
-  devise_for :users
-
-  as :user do
-    get "/login" => "devise/sessions#new"
-    get "/logout" => "devise/sessions#destroy"
-  end
+  devise_for :users,
+    path: '',
+    path_names: {
+      sign_in: "login",
+      sign_out: "logout",
+      sign_up: "register"
+    }
 
   resources :time_entries
   resource :home, except: [:index, :new, :create, :destroy]
 
-  authenticate :user do
-    root :to => "time_entries#index"
-  end
-
+  root :to => 'time_entries#index', :constraints => lambda {|r| r.env["warden"].authenticate? }
   root :to => 'home#show'
 end
