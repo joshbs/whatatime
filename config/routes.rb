@@ -9,6 +9,9 @@ Whatatime::Application.routes.draw do
   resources :time_entries
   resource :home, except: [:index, :new, :create, :destroy]
 
+  authenticate :user do
+    root :to => "time_entries#index"
+  end
 
   root :to => 'home#show'
 end
