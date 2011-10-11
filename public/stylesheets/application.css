@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Sansita+One);
-@import url(http://fonts.googleapis.com/css?family=Gentium+Basic);
+@import url(http://fonts.googleapis.com/css?family=Andada);
 
 body {
   background-color: #66CC33;
@@ -16,7 +16,7 @@ a {
 }
 
 header {
-  padding: 0 1em
+  padding: 0 1em;
 }
 
 header > h1 {
@@ -52,13 +52,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  font-family: 'Gentium Basic', sans-serif;
+  font-family: 'Andada', sans-serif;
+  font-weight: normal;
 }
 
 #app {
   margin: 1em 0 0 0;
   padding: 2em 0;
-  background-color: #E6E6E6;
+  padding-bottom:0;
+  background-color: #EEE;
   
   border: 0.5em solid #262626;
   border-radius: 1em;
@@ -79,6 +81,8 @@ h1 {
   margin-top:1em;
   padding:0.25em 1em;
   border-top: 1px solid #ccc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d6d6d6), color-stop(10%, #e0e0e0), to(#e6e6e6));
+  
 }
 
 #time_entries > .time_entry form{
@@ -90,12 +94,17 @@ h1 {
 }
 
 #time_entries > .time_entry form input[type="submit"]{
-  cursor: pointer;
   margin: 0;
+  margin-top: -1px;
   padding:0.5em 1em;
   
+  cursor: pointer;
+  
   border:none;
-  background-color: #ccc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), color-stop(85%,#e6e6e6),color-stop(85%,#ccc), to(#ccc));
+
+  border: 1px solid #ccc;
+  border-top:none;
 }
 
 #time_entries > .time_entry form input[type="submit"][disabled]{
@@ -104,15 +113,21 @@ h1 {
 
 #time_entries > .time_entry form input[type="submit"][value="start"]{
   background-color: #6c3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), color-stop(85%,#e6e6e6),color-stop(85%,#6c3), to(#6c3));
 }
 
 #time_entries > .time_entry form input[type="submit"][value="stop"]{
   background-color: #C00;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), color-stop(85%,#e6e6e6),color-stop(85%,#c00), to(#C00));
+}
+
+#time_entries > .time_entry:first-child form input[type="submit"]{
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(85%,#eee),color-stop(85%,#ccc), to(#ccc));
 }
 
 #user_navigation {
   padding: 0.5em;
-  background-color: #eee;
+  background-color: #f6f6f6;
   color: #999;
 
   font-size: 14px;
