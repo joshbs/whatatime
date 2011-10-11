@@ -16,13 +16,7 @@ a {
 }
 
 header {
-  margin: 1em 0 0 0;
-  padding: 2em 1em 0.5em 1em;
-  background-color: #E6E6E6;
-
-  border-radius: 1em 1em 0 0;
-  border: 0.5em solid #262626;
-  border-bottom: none;
+  padding: 0 1em
 }
 
 header > h1 {
@@ -61,18 +55,16 @@ h1 {
   font-family: 'Gentium Basic', sans-serif;
 }
 
-#content {
-  margin:0;
-  padding: 0.5em 0 3em 0;
+#app {
+  margin: 1em 0 0 0;
+  padding: 2em 0;
   background-color: #E6E6E6;
-
-  border-radius: 0 0 1em 1em; 
   
   border: 0.5em solid #262626;
-  border-top: none;
+  border-radius: 1em;
 }
 
-#content > article, #content > div, #content > form {
+#app > article, #app > div, #app > form {
   padding: 1em 1em 0 1em;
 }
 

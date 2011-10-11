@@ -10,14 +10,14 @@
   <%= content_tag :p, notice, :class => "notice" if notice %>
   <%= content_tag :p, alert, :class => "alert" if alert %>
 
-  <header>
-    <%= render partial: "shared/user_navigation" %>
-    <h1><%= link_to "Whatatime", root_url %></h1>
-    <p><%= CatchPhrase.random.html_safe %></p>
-    <%= render partial: "shared/site_navigation" %>
-  </header>
-  <div id="content">
-  <%= yield %>
+  <div id="app">
+    <header>
+      <%= render partial: "shared/user_navigation" %>
+      <h1><%= link_to "Whatatime", root_url %></h1>
+      <p><%= CatchPhrase.random.html_safe %></p>
+      <%= render partial: "shared/site_navigation" %>
+    </header>
+    <%= yield %>
   </div>
 
 </body>
