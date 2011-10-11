@@ -105,11 +105,12 @@ h1 {
 
   float:right;
   position:relative;
-  bottom: 2em;
-  left: 1em;
+  bottom: 2.3em;
+  left: 1.2em;
 }
 
 #user_navigation > a {
+  padding:0;
   color: #999;
 }
 
