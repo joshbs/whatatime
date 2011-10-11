@@ -15,8 +15,8 @@
       <%= render partial: "shared/user_navigation" %>
       <h1><%= link_to "Whatatime", root_url %></h1>
       <p><%= CatchPhrase.random.html_safe %></p>
-      <%= render partial: "shared/site_navigation" %>
     </header>
+    <%= render partial: "shared/page_navigation" %>
     <%= yield %>
   </div>
 

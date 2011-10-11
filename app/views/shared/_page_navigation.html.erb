@@ -1,0 +1,6 @@
+<nav id="page_navigation">
+  <%= link_to "", new_time_entry_path, class: "addme" %>
+  <%= content_tag :h1 do
+    yield(:title)
+  end  if content_for(:title) %>
+</nav>
