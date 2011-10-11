@@ -76,6 +76,8 @@ h1 {
 #app > nav#page_navigation {
   padding: 1em 0;
   background: #eee;
+  
+  height: 2em;
 }
 
 #app > nav#page_navigation > h1 {
@@ -145,6 +147,7 @@ h1 {
 
   border: 1px solid #ccc;
   border-top:none;
+  border-right: none;
 }
 
 #time_entries > .time_entry form input[type="submit"][disabled]{
