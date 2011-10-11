@@ -3,7 +3,8 @@ class CatchPhrase
     "where your time can just <em>be</em> time",
     "you break it, we time it",
     "don't worry about time, that's why we're here",
-    "if it takes time, we like it a lot more"
+    "if it takes time, we like it a lot more",
+    "we're like <em>red-light green-light</em> for your time"
   ]
   
   def self.all
