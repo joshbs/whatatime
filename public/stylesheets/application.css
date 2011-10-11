@@ -91,6 +91,22 @@ h1 {
   padding-top: 0;
 }
 
+.sign-in {
+  padding: 0.5em;
+  background-color: #eee;
+  color: #999;
+  
+  border: 1px solid #fff;
+  border-right:none;
+  border-top:none;
+  border-radius: 0 0.4em 0 .25em;
+
+  float:right;
+  position:relative;
+  bottom: 2em;
+  left: 1em;
+}
+
 .time_entry {
   padding: 0 1em;
 }

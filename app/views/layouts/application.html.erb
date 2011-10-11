@@ -11,6 +11,7 @@
   <%= content_tag :p, alert, :class => "alert" if alert %>
 
   <header>
+    <%= render partial: "shared/user_navigation" %>
     <h1><%= link_to "Whatatime", root_url %></h1>
     <p><%= CatchPhrase.random.html_safe %></p>
   </header>
