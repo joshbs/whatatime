@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-Whatatime::Application.config.session_store :cookie_store, :key => '_whatatime_session'
+#Whatatime::Application.config.session_store :cookie_store, :key => '_whatatime_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# Whatatime::Application.config.session_store :active_record_store
+Whatatime::Application.config.session_store :active_record_store
