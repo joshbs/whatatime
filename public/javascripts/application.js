@@ -35,15 +35,19 @@ $(function(){
 
   function openPageControl(duration) {
     pageControlOpen = true;
+
+    $("#page_navigation > *").stop(true, false);
     $("#page_navigation > *").animate({ left: 0 }, duration);
     $("#page_navigation > .control > form > #time_entry_name").focus();
   }
 
   function closePageControl(duration) {
     pageControlOpen = false;
+
     to   = $("#page_navigation > .control > .cancel").offset();
     from = $("#page_navigation > .control > .add").offset();
-    
+
+    $("#page_navigation > *").stop(true, false);
     $("#page_navigation > *").animate({ left: to.left - from.left }, duration);
     $("#page_navigation > .control > form").clear();
   }
