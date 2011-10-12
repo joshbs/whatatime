@@ -195,22 +195,25 @@ form input[type="submit"] {
 }
 
 #time_entries > .time_entry .control {
-  margin-top:0.2em;
+  margin-top:0.5em;
   margin-right:1em;
   display:inline-block;
   vertical-align:top;
 }
 
-#time_entries > .time_entry .control > a.archive {
+#time_entries > .time_entry .control .archive {
   width: 2em;
   height: 2em;
   display:block;
+  visibility:hidden;
+  border:none;
 }
 
-#time_entries > .time_entry:hover .control > a.archive {
+#time_entries > .time_entry:hover .control .archive {
   background-image: url('/images/archive_16.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  visibility:visible;
 }
 
 #time_entries > .time_entry form{

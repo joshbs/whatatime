@@ -4,7 +4,7 @@
 <% @time_entries.each do |time_entry| %>
   <article class="time_entry">
     <div class="control">
-      <%= link_to "", "#", class: "archive" %>
+      <%= button_to "", time_entry_path(time_entry, archived: true), method: :put, class: "archive" %>
     </div>
     <%= render 'timer', :item => time_entry %>
     <div class="content">
