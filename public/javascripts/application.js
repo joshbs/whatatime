@@ -38,16 +38,20 @@ $(function () {
     function openPageControl(duration, input) {
         pageControlOpen = true;
 
-        $("#page_navigation > *").stop(true, false);
-        $("#page_navigation > *").animate({ left: 0 }, duration);
         if (input) {
             $("#page_navigation > .control > form > #time_entry_name").focus();
             $("#page_navigation > .control > form > #time_entry_name").val(input);
         }
+
+        $("#page_navigation > *").stop(true, false);
+        $("#page_navigation > *").animate({ left: 0 }, duration);
     }
 
     function closePageControl(duration) {
         pageControlOpen = false;
+
+        $("#page_navigation > .control > form").clear();
+        $("#page_navigation > .control > form > #time_entry_name").blur();
 
         var to, from;
 
@@ -56,8 +60,6 @@ $(function () {
 
         $("#page_navigation > *").stop(true, false);
         $("#page_navigation > *").animate({ left: to.left - from.left }, duration);
-        $("#page_navigation > .control > form").clear();
-        $("#page_navigation > .control > form > #time_entry_name").blur();
     }
 
     setPageControlWidth();
@@ -79,7 +81,8 @@ $(function () {
     });
 
     $(document).keyup(function (e) {
-        var character = e.keyCode + (e.shiftKey ? 0 : 32);
+        var character = e.which + (e.shiftKey ? 0 : 32);
+
         if (e.ctrlKey && e.altKey && !e.shiftKey) {
             if (e.keyCode === 78) {
                 if (pageControlOpen) {
@@ -92,7 +95,6 @@ $(function () {
             closePageControl(200);
         } else if(!e.ctrlKey && !e.altKey && e.which != 27) {
             openPageControl(100, String.fromCharCode(character));
-            console.log(e.which);
         }
     });
 });
