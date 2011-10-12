@@ -114,7 +114,7 @@ h1 {
 
 #time_entries > .time_entry {
   margin-top:1em;
-  padding:0.25em 1em;
+  padding:0.25em 0;
   
   min-height: 4em;
   
@@ -123,13 +123,35 @@ h1 {
   
 }
 
+#time_entries > .time_entry .content {
+  float:left;
+  clear:none;
+}
+
+#time_entries > .time_entry .control {
+  display:inline-block;
+  float:left;
+}
+
+#time_entries > .time_entry .control > a.archive {
+  margin-right:1em;
+  width: 2em;
+  height: 2em;
+  display:inline-block;
+}
+
+#time_entries > .time_entry:hover .control > a.archive {
+  background-image: url('/images/archive_16.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 #time_entries > .time_entry:first-child {
   margin-top:0;
 }
 
 #time_entries > .time_entry form{
   padding:0;
-  left: 1em;
   bottom: 0.25em;
   float:right;
   position: relative;
