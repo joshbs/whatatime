@@ -202,7 +202,7 @@ form input[type="submit"] {
 }
 
 #time_entries > .time_entry .control .archive {
-  width: 2em;
+  width: 2.5em;
   height: 2em;
   display:block;
   visibility:hidden;
@@ -212,7 +212,7 @@ form input[type="submit"] {
 #time_entries > .time_entry:hover .control .archive {
   background-image: url('/images/archive_16.png');
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 0.75em 50%;
   visibility:visible;
 }
 
