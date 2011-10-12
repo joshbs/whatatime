@@ -59,6 +59,10 @@ h1 {
   font-weight: normal;
 }
 
+form input[type="submit"] {
+  cursor: pointer;
+}
+
 #app {
   margin: 1em 0 0 0;
   padding: 0;
@@ -67,6 +71,8 @@ h1 {
   
   border: 0.5em solid #262626;
   border-radius: 1em;
+  
+  overflow: hidden;
 }
 
 #app > header {
@@ -78,8 +84,10 @@ h1 {
 #app > nav#page_navigation {
   padding: 1em 0;
   background: #eee;
-  
-  height: 2em;
+}
+
+#app > nav#page_navigation > * {
+  position: relative;
 }
 
 #app > nav#page_navigation > h1 {
@@ -89,18 +97,74 @@ h1 {
   color: #454545;
 }
 
-#app > nav#page_navigation .add {
-  margin-right:1em;
-  width: 2em;
-  height: 2em;
+#app > nav#page_navigation .control {
+  margin-right:0.5em;
+  padding: 3px;
+  
+  display:inline-block;
+  vertical-align:top;
+  
   border: 1px solid #bbb;
-  border-left: none;
+  border-left:none;
   border-radius: 0 0.5em 0.5em 0;
   background-color: #e0e0e0;
   background-image: url('/images/add_16.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+#app > nav#page_navigation .control + h1 {
+  display:inline-block;
+}
+
+#app > nav#page_navigation .control > a {
+  width: 2em;
+  height: 2em;
+  display:inline-block;
+  vertical-align:middle;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+#app > nav#page_navigation .control > a.cancel {
+  background-image: url('/images/cancel_16.png');
+}
+
+#app > nav#page_navigation .control > a.add {
+  background-image: url('/images/add_16.png');
+}
+
+#app > nav#page_navigation .control > form {
+  display:inline-block;
+  vertical-align:middle;
+}
+
+#app > nav#page_navigation .control > form > * {
   float:left;
+  font-size: 16px;
+}
+
+#app > nav#page_navigation .control > form > #time_entry_name {
+  margin:0;
+  padding: 0.25em;
+  background: #f6f6f6;
+  border: 1px solid #bbb;
+  border-right:none;
+}
+
+#app > nav#page_navigation .control > form > input[type="submit"] {
+  margin:0;
+  padding: 0.25em 0.5em;
+  color: #999;
+  background: #f6f6f6;
+  border: 1px solid #bbb;
+  border-left:none;
+}
+
+#app > nav#page_navigation .control > form > #time_entry_name:focus,
+#app > nav#page_navigation .control > form > #time_entry_name:focus + input[type="submit"] {
+  border-color: #6c3;
+  outline: none;
 }
 
 #app > article, #app > div, #app > form {

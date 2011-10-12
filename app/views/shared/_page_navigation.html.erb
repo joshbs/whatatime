@@ -1,5 +1,9 @@
 <nav id="page_navigation">
-  <%= link_to "", new_time_entry_path, class: "add" %>
+  <div class="control">
+    <%= link_to "", "#", class: "cancel" %>
+    <%= render partial: "time_entries/form" %>
+    <%= link_to "", "#", class: "add" %>
+  </div>
   <%= content_tag :h1 do
     yield(:title)
   end  if content_for(:title) %>
