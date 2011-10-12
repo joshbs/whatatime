@@ -33,12 +33,14 @@ $(function(){
     $("#page_navigation > .control > form > #time_entry_name").width("+=" + offset);
   }
 
-  function openPageControl(duration) {
+  function openPageControl(duration, autofocus) {
     pageControlOpen = true;
 
     $("#page_navigation > *").stop(true, false);
     $("#page_navigation > *").animate({ left: 0 }, duration);
-    $("#page_navigation > .control > form > #time_entry_name").focus();
+    if(autofocus == true) {
+      $("#page_navigation > .control > form > #time_entry_name").focus();
+    }
   }
 
   function closePageControl(duration) {
@@ -50,6 +52,7 @@ $(function(){
     $("#page_navigation > *").stop(true, false);
     $("#page_navigation > *").animate({ left: to.left - from.left }, duration);
     $("#page_navigation > .control > form").clear();
+      $("#page_navigation > .control > form > #time_entry_name").blur();
   }
   
   setPageControlWidth();
