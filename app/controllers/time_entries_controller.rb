@@ -4,7 +4,7 @@ class TimeEntriesController < ApplicationController
   # GET /time_entries.xml
 
   def index
-    @time_entries = current_user.time_entries
+    @time_entries = current_user.time_entries.where(archived: false)
 
     respond_to do |format|
       format.html # index.html.
@@ -56,12 +56,13 @@ class TimeEntriesController < ApplicationController
   def update
     @time_entry = TimeEntry.find(params[:id])
 
-    @time_entry.started_at = Time.now if params[:start]
-    @time_entry.stopped_at = Time.now if params[:stop]
+    @time_entry.started_at  = Time.now  if params[:start]
+    @time_entry.stopped_at  = Time.now  if params[:stop]
+    @time_entry.archived    = true      if params[:archived]
 
     respond_to do |format|
       if @time_entry.update_attributes(params[:time_entry])
-        format.html { redirect_to(@time_entry, :notice => 'Time entry was successfully updated.') }
+        format.html { redirect_to(time_entries_path, :notice => 'Time entry was successfully updated.') }
       else
         format.html { render :action => "edit" }
       end
