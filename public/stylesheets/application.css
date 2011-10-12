@@ -216,6 +216,7 @@ form input[type="submit"] {
   visibility:visible;
 }
 
+
 #time_entries > .time_entry form{
   padding:0;
   bottom: 0.25em;
@@ -301,6 +302,17 @@ form input[type="submit"] {
   background-position: 1em 1em;
 
   color: #E6E6E6;
+}
+
+.notice + .alert,
+.notice + .error,
+.alert + .notice,
+.alert + .error,
+.error + .notice,
+.error + .alert {
+  margin-top: 0;
+  padding-top: 0;
+  background-position: 1em 0em;
 }
 
 .notice {
