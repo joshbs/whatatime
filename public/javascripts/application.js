@@ -2,6 +2,8 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(function(){
+  var pageControlOpen = false;
+
   $.fn.clear = function() {
     $(this).find(':input').each(function() {
       switch(this.type) {
@@ -32,11 +34,13 @@ $(function(){
   }
 
   function openPageControl(duration) {
+    pageControlOpen = true;
     $("#page_navigation > *").animate({ left: 0 }, duration);
     $("#page_navigation > .control > form > #time_entry_name").focus();
   }
 
   function closePageControl(duration) {
+    pageControlOpen = false;
     to   = $("#page_navigation > .control > .cancel").offset();
     from = $("#page_navigation > .control > .add").offset();
     
@@ -64,7 +68,11 @@ $(function(){
   $(document).keyup(function(e) {
     if(e.ctrlKey && e.altKey && !e.shiftKey){
        if(e.keyCode == 78){
-          openPageControl(200);
+          if(pageControlOpen) {
+            closePageControl(200);
+          } else {
+            openPageControl(200);
+          }
        }
     }
   });
