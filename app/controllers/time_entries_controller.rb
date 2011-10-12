@@ -4,7 +4,7 @@ class TimeEntriesController < ApplicationController
   # GET /time_entries.xml
 
   def index
-    @time_entries = current_user.time_entries.where(archived: false)
+    @time_entries = current_user.time_entries.where(archived: false).order("created_at DESC")
 
     respond_to do |format|
       format.html # index.html.
