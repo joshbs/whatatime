@@ -7,10 +7,9 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <%= content_tag :p, notice, :class => "notice" if notice %>
-  <%= content_tag :p, alert, :class => "alert" if alert %>
-
   <div id="app">
+    <%= content_tag :p, notice, :class => "notice" if notice %>
+    <%= content_tag :p, alert, :class => "alert" if alert %>
     <header>
       <%= render partial: "shared/user_navigation" %>
       <h1><%= link_to "Whatatime", root_url %></h1>

@@ -43,7 +43,7 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       if @time_entry.save
-        format.html { redirect_to(@time_entry, :notice => 'Time entry was successfully created.') }
+        format.html { redirect_to(time_entries_path, :notice => 'Time entry was successfully created.') }
 
       else
         format.html { render :action => "new" }
