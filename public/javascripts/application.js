@@ -21,16 +21,18 @@ $(function () {
     };
 
     function setPageControlWidth() {
-        var width, diff, to, from, offset;
-        width = $("#app").innerWidth() - $("#page_navigation > h1").width() - $("#page_navigation > h1").height();
-        $("#page_navigation > .control").width(width);
+        var nav_width, app_width, diff;
 
-        diff = $("#page_navigation > .control").innerWidth() - $("#page_navigation > .control").width();
-        to = $("#page_navigation > .control").offset().left + $("#page_navigation > .control").innerWidth() - (diff * 0.5);
-        from = $("#page_navigation > .control > .add").offset().left + $("#page_navigation > .control > .add").outerWidth();
-        offset = to - from;
+        app_width = $("#page_navigation").width();
 
-        $("#page_navigation > .control > form > #time_entry_name").width("+=" + offset);
+        nav_width = 0;
+        $("#page_navigation > *").each(function () {
+            nav_width += $(this).outerWidth(true);
+        });
+        
+        diff = (app_width - nav_width);
+
+        $("#page_navigation > .control > form > #time_entry_name").width("+=" + diff);
     }
 
     function openPageControl(duration, autofocus) {

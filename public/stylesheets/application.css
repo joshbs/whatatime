@@ -83,7 +83,9 @@ form input[type="submit"] {
 
 #app > nav#page_navigation {
   padding: 1em 0;
+  padding-right: 1.5em;
   background: #eee;
+  white-space:nowrap;
 }
 
 #app > nav#page_navigation > * {
