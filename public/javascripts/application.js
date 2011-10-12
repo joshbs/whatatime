@@ -35,13 +35,14 @@ $(function () {
         $("#page_navigation > .control > form > #time_entry_name").width("+=" + diff);
     }
 
-    function openPageControl(duration, autofocus) {
+    function openPageControl(duration, input) {
         pageControlOpen = true;
 
         $("#page_navigation > *").stop(true, false);
         $("#page_navigation > *").animate({ left: 0 }, duration);
-        if (autofocus === true) {
+        if (input) {
             $("#page_navigation > .control > form > #time_entry_name").focus();
+            $("#page_navigation > .control > form > #time_entry_name").val(input);
         }
     }
 
@@ -74,17 +75,24 @@ $(function () {
         if (e.which === 27) {
             closePageControl(200);
         }
+        return false;
     });
 
     $(document).keyup(function (e) {
+        var character = e.keyCode + (e.shiftKey ? 0 : 32);
         if (e.ctrlKey && e.altKey && !e.shiftKey) {
             if (e.keyCode === 78) {
                 if (pageControlOpen) {
-                    closePageControl(200);
+                    openPageControl(0, true);
                 } else {
-                    openPageControl(200);
+                    openPageControl(200, true);
                 }
             }
+        } else if (e.which == 27) {
+            closePageControl(200);
+        } else if(!e.ctrlKey && !e.altKey && e.which != 27) {
+            openPageControl(100, String.fromCharCode(character));
+            console.log(e.which);
         }
     });
 });
