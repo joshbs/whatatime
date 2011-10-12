@@ -122,6 +122,8 @@ h1 {
   
   border-top: 1px solid #ccc;
   background: -webkit-gradient(linear, left top, left bottom, from(#d6d6d6), color-stop(10%, #e0e0e0), to(#e6e6e6));
+  background-size: 100% 4em;
+  background-repeat: no-repeat;
 }
 
 #time_entries > .time_entry .content {
