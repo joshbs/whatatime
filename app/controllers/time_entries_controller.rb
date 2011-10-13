@@ -8,7 +8,7 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.
-      format.json { render :json => @time_entries.as_json } # index.json.
+      format.json { render json: @time_entries.as_json } # index.json.
     end
   end
 
@@ -18,7 +18,7 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.
-      format.json { render :json => @time_entries.as_json } #show.json
+      format.json { render json: @time_entries.as_json } #show.json
     end
   end
 
@@ -43,10 +43,10 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       if @time_entry.save
-        format.html { redirect_to(time_entries_path, :notice => "#{@time_entry.name} was successfully created. #{undo_link}") }
+        format.html { redirect_to(time_entries_path, notice: "#{@time_entry.name} was successfully created. #{undo_link}") }
 
       else
-        format.html { render :action => "new" }
+        format.html { render action: "new" }
       end
     end
   end
@@ -62,9 +62,9 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       if @time_entry.update_attributes(params[:time_entry])
-        format.html { redirect_to(time_entries_path, :notice => "#{@time_entry.name} was successfully updated. #{undo_link}") }
+        format.html { redirect_to(time_entries_path, notice: "#{@time_entry.name} was successfully updated. #{undo_link}") }
       else
-        format.html { render :action => "edit" }
+        format.html { render action: "edit" }
       end
     end
   end
@@ -82,7 +82,7 @@ class TimeEntriesController < ApplicationController
   end
 
   def undo_link
-    view_context.link_to("undo", revert_version_path(@time_entry.versions.scoped.last), :id => "undo", :method => :post)
+    view_context.link_to("undo", revert_version_path(@time_entry.versions.scoped.last), id: "undo", method: :post)
   end
 
   # JSON
