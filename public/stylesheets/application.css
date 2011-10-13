@@ -64,7 +64,7 @@ form input[type="submit"] {
 }
 
 #app {
-  margin: 1em 0 0 0;
+  margin: 1em 0 1em 0;
   padding: 0;
   padding-bottom:2em;
   background-color: #e6e6e6;
