@@ -93,11 +93,13 @@ $(function () {
     })
 
     $(document).keypress(function (e) {
-        e.preventDefault();
-
         // anything w/o a ctrl or alt binding
         if(!e.ctrlKey && !e.altKey) {
             openPageControl(100, String.fromCharCode(event.keyCode));
+        }
+
+        if(e.which != 13) {
+          e.preventDefault();
         }
     });
 });
