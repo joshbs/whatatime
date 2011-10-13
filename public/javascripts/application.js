@@ -40,7 +40,9 @@ $(function () {
 
         if (input) {
             $("#page_navigation > .control > form > #time_entry_name").focus();
-            $("#page_navigation > .control > form > #time_entry_name").val(input);
+            $("#page_navigation > .control > form > #time_entry_name").val(function(i, value) {
+                return value + input;
+            });
         }
 
         $("#page_navigation > *").stop(true, false);
@@ -73,28 +75,26 @@ $(function () {
         closePageControl(200);
     });
 
-    $("#page_navigation > .control > form > #time_entry_name").keyup(function (e) {
-        if (e.which === 27) {
+    $(document).keyup(function (e) {
+        e.preventDefault();
+
+        // escape
+        if (e.which == 27) {
             closePageControl(200);
         }
-        return false;
-    });
 
-    $(document).keyup(function (e) {
-        var character = e.which + (e.shiftKey ? 0 : 32);
+        // ctrl+n
+        if (e.ctrlKey && e.altKey && !e.shiftKey && e.keyCode === 78) {
+            openPageControl(200);
+        }
+    })
 
-        if (e.ctrlKey && e.altKey && !e.shiftKey) {
-            if (e.keyCode === 78) {
-                if (pageControlOpen) {
-                    openPageControl(0, true);
-                } else {
-                    openPageControl(200, true);
-                }
-            }
-        } else if (e.which == 27) {
-            closePageControl(200);
-        } else if(!e.ctrlKey && !e.altKey && e.which != 27) {
-            openPageControl(100, String.fromCharCode(character));
+    $(document).keypress(function (e) {
+        e.preventDefault();
+
+        // anything w/o a ctrl or alt binding
+        if(!e.ctrlKey && !e.altKey) {
+            openPageControl(100, String.fromCharCode(event.keyCode));
         }
     });
 });
