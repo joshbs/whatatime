@@ -20,8 +20,10 @@ $(function () {
         });
     };
 
-    function setPageControlWidth() {
+    function setPageControlWidth(duration) {
         var nav_width, app_width, diff;
+
+        duration = duration || 0;
 
         app_width = $("#page_navigation").width();
 
@@ -32,7 +34,7 @@ $(function () {
         
         diff = (app_width - nav_width);
 
-        $("#page_navigation > .control > form > #time_entry_name").width("+=" + diff);
+        $("#page_navigation > .control > form > #time_entry_name").animate({width: ("+=" + diff)}, duration);
     }
 
     function openPageControl(duration, input) {
@@ -47,6 +49,7 @@ $(function () {
 
         $("#page_navigation > *").stop(true, false);
         $("#page_navigation > *").animate({ left: 0 }, duration);
+        setPageControlWidth(duration);
     }
 
     function closePageControl(duration) {
