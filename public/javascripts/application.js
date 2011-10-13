@@ -86,7 +86,7 @@ $(function () {
             closePageControl(200);
         }
 
-        // ctrl+n
+        // ctrl+alt+n
         if (e.ctrlKey && e.altKey && !e.shiftKey && e.keyCode === 78) {
             openPageControl(200);
         }
