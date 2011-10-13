@@ -90,6 +90,11 @@ $(function () {
         if (e.ctrlKey && e.altKey && !e.shiftKey && e.keyCode === 78) {
             openPageControl(200);
         }
+
+        // ctrl+z
+        if (e.ctrlKey && !e.altKey && !e.shiftKey && e.keyCode === 90) {
+            $("#undo").click();
+        }
     })
 
     $(document).keypress(function (e) {
