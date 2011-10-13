@@ -8,8 +8,8 @@
 </head>
 <body>
   <div id="app">
-    <%= content_tag :p, notice, :class => "notice" if notice %>
-    <%= content_tag :p, alert, :class => "alert" if alert %>
+    <%= content_tag :p, notice.html_safe, :class => "notice" if notice %>
+    <%= content_tag :p, alert.html_safe, :class => "alert" if alert %>
     <header>
       <%= render partial: "shared/user_navigation" %>
       <h1><%= link_to "Whatatime", root_url %></h1>

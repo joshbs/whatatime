@@ -49,6 +49,8 @@ GEM
     mime-types (1.16)
     mysql2 (0.2.7)
     orm_adapter (0.0.5)
+    paper_trail (2.4.0)
+      rails (~> 3)
     polyglot (0.3.2)
     rack (1.2.4)
     rack-mount (0.6.14)
@@ -86,4 +88,5 @@ DEPENDENCIES
   devise
   jquery-rails
   mysql2
+  paper_trail
   rails (= 3.0.9)

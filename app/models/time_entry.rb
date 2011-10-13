@@ -1,6 +1,8 @@
 class TimeEntry < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
 
+  has_paper_trail
+
   belongs_to :user
 
   has_many :paranormal_activities

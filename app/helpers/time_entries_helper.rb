@@ -1,4 +1,5 @@
 module TimeEntriesHelper
+  include VersionsHelper
 
   def formatted_duration (entry, length)
     arr = []

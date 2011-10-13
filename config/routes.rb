@@ -10,6 +10,8 @@ Whatatime::Application.routes.draw do
   resources :time_entries
   resource :home, controller: 'home', except: [:index, :new, :create, :destroy]
 
+  post "versions/:id/revert" => "versions#revert", :as => "revert_version"
+
   root :to => 'time_entries#index', :constraints => lambda {|r| r.env["warden"].authenticate? }
   root :to => 'home#show'
 end

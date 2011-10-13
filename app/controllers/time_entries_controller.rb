@@ -43,7 +43,7 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       if @time_entry.save
-        format.html { redirect_to(time_entries_path, :notice => 'Time entry was successfully created.') }
+        format.html { redirect_to(time_entries_path, :notice => "#{@time_entry.name} was successfully created.") }
 
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       if @time_entry.update_attributes(params[:time_entry])
-        format.html { redirect_to(time_entries_path, :notice => 'Time entry was successfully updated.') }
+        format.html { redirect_to(time_entries_path, :notice => "#{@time_entry.name} was successfully updated. #{undo_link}") }
       else
         format.html { render :action => "edit" }
       end
@@ -79,6 +79,10 @@ class TimeEntriesController < ApplicationController
       format.html { redirect_to(time_entries_url) }
       end
     end
+  end
+
+  def undo_link
+    view_context.link_to("undo", revert_version_path(@time_entry.versions.scoped.last), :method => :post)
   end
 
   # JSON
