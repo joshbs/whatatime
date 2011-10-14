@@ -2,10 +2,19 @@ class TimeEntry < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
 
   has_paper_trail
+  acts_as_api
 
   belongs_to :user
 
   has_many :paranormal_activities
+
+  api_accessible :default do |template|
+    template.add :name
+    template.add :started_at
+    template.add :stopped_at
+    template.add :to_relative_time
+    template.add :archived
+  end
 
   def timer_running?
     !self.started_at.nil? && !self.timer_complete?

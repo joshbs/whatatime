@@ -4,11 +4,11 @@ class TimeEntriesController < ApplicationController
   # GET /time_entries.xml
 
   def index
-    @time_entries = current_user.time_entries.where(archived: false).order("created_at DESC")
+    @time_entries = current_user.time_entries.order("created_at DESC")
 
     respond_to do |format|
       format.html # index.html.
-      format.json { render json: @time_entries.as_json } # index.json.
+      format.json { render_for_api :default, json: @time_entries } # index.json.
     end
   end
 
@@ -18,7 +18,7 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.
-      format.json { render json: @time_entry.as_json } #show.json
+      format.json { render_for_api :default, json: @time_entry }
     end
   end
 
