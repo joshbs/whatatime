@@ -44,7 +44,7 @@ class TimeEntriesController < ApplicationController
     respond_to do |format|
       if @time_entry.save
         format.html { redirect_to(time_entries_path, notice: "#{@time_entry.name} was successfully created. #{undo_link}") }
-
+        format.json { render_for_api :default, json: @time_entry }
       else
         format.html { render action: "new" }
       end
@@ -63,6 +63,7 @@ class TimeEntriesController < ApplicationController
     respond_to do |format|
       if @time_entry.update_attributes(params[:time_entry])
         format.html { redirect_to(time_entries_path, notice: "#{@time_entry.name} was successfully updated. #{undo_link}") }
+        format.json { render_for_api :default, json: @time_entry }
       else
         format.html { render action: "edit" }
       end
