@@ -1,0 +1,5 @@
+%article.time_entry
+  %h1= @time_entry.name
+  = link_to 'destroy', @time_entry, :confirm => 'Are you sure?', :method => :delete
+  %h2= @time_entry.to_relative_time
+  = render 'timer', :item => @time_entry

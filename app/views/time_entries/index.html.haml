@@ -1,0 +1,10 @@
+- title( link_to "Time Entries", time_entries_path)
+#time_entries
+  - @time_entries.each do |time_entry|
+    %article.time_entry
+      .control
+        = button_to "", time_entry_path(time_entry, archived: true), method: :put, class: "archive"
+      = render 'timer', :item => time_entry
+      .content
+        %h1= link_to time_entry.name, time_entry
+        %h2= time_entry.to_relative_time
