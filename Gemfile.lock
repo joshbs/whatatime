@@ -28,6 +28,10 @@ GEM
       activemodel (= 3.0.9)
       activesupport (= 3.0.9)
     activesupport (3.0.9)
+    acts_as_api (0.3.10)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      rack (>= 1.1.0)
     arel (2.0.10)
     bcrypt-ruby (3.0.1)
     builder (2.1.2)
@@ -85,6 +89,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_api
   devise
   jquery-rails
   mysql2

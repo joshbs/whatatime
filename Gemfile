@@ -8,3 +8,4 @@ gem 'devise'
 
 gem 'jquery-rails'
 gem 'paper_trail'
+gem 'acts_as_api'
