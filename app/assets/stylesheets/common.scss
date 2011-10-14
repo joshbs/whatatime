@@ -81,7 +81,7 @@ form input[type="submit"] {
         border-left: none;
         border-radius: 0 0.5em 0.5em 0;
         background-color: #e0e0e0;
-        background-image: url('/images/add_16.png');
+        background-image: url('/assets/add_16.png');
         background-repeat: no-repeat;
         background-position: 50% 50%;
         + h1 {
@@ -96,9 +96,9 @@ form input[type="submit"] {
             background-repeat: no-repeat;
             background-position: 50% 50%;
             &.cancel {
-              background-image: url('/images/cancel_16.png'); }
+              background-image: url('/assets/cancel_16.png'); }
             &.add {
-              background-image: url('/images/add_16.png'); } }
+              background-image: url('/assets/add_16.png'); } }
           form {
             display: inline-block;
             vertical-align: middle;
@@ -154,7 +154,7 @@ form input[type="submit"] {
         visibility: hidden;
         border: none; } }
     &:hover .control .archive {
-      background-image: url('/images/archive_16.png');
+      background-image: url('/assets/archive_16.png');
       background-repeat: no-repeat;
       background-position: 0.75em 50%;
       visibility: visible; }
@@ -236,7 +236,7 @@ form input[type="submit"] {
     background-position: 1em 0em; } }
 
 .notice {
-  background-image: url('/images/notice_16.png'); }
+  background-image: url('/assets/notice_16.png'); }
 
 .alert, .error {
-  background-image: url('/images/alert_16.png'); }
+  background-image: url('/assets/alert_16.png'); }
