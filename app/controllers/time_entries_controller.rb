@@ -77,12 +77,13 @@ class TimeEntriesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(time_entries_url) }
-      end
     end
   end
+
+  private
 
   def undo_link
     view_context.link_to("undo", revert_version_path(@time_entry.versions.scoped.last), id: "undo", method: :post)
   end
+end
 
-  # JSON
