@@ -3,7 +3,8 @@
   - @time_entries.each do |time_entry|
     %article.time_entry
       .control
-        = link_to "", time_entry_path(time_entry, archived: true), remote: true, 'data-type' => :json, method: :put, class: "archive"
+        = link_to "", time_entry_path(time_entry, archived: true, format: :json), remote: true, method: :put, class: "archive"
+
       = render 'timer', :item => time_entry
       .content
         %h1= link_to time_entry.name, time_entry
